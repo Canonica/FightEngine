@@ -6,9 +6,16 @@ class GameMode
 public:
 	GameMode();
 	~GameMode();
-	static void StartGameMode();
+	void StartGameMode();
+
+	enum GAMEMODE
+	{
+		QUICK,
+		TOURNAMENT,
+		ADVENTURE
+	};
+
 private:
-	int nbOfRounds;
-	//std::list<Round> listOfRounds;
+	std::list<Round> listOfRounds;
 };
 

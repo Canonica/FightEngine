@@ -1,6 +1,7 @@
 #pragma once
 #include "Observer.h"
 
+
 class Player;
 class Timer;
 class Round :
@@ -11,7 +12,7 @@ public:
 	~Round();
 
 	void Notify();
-	static void StartRound();
+	void StartRound();
 	void FinishRound();
 	void EndTurn();
 	void Turn();
@@ -21,6 +22,7 @@ private :
 	Player* looser;
 	Timer* timer;
 	Player* currentPlayer;
+	bool running;
 
 };
 
