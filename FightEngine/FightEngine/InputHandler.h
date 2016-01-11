@@ -2,6 +2,14 @@
 #include <array>
 #include "Action.h"
 #include "Player.h"
+#include "Attack1.h"
+#include "Attack2.h"
+#include "MoveForward.h"
+#include "MoveBackward.h"
+#include "Jump.h"
+#include "Block.h"
+#include "Crouch.h"
+
 class InputHandler
 {
 public:
@@ -13,6 +21,6 @@ public:
 
 private:
 	std::array<Action, 7> actionArray;
-	Player player;
+	Player *player;
 };
 
