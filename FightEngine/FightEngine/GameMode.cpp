@@ -14,7 +14,3 @@ GameMode::~GameMode()
 void GameMode::StartGameMode()
 {
 }
-
-void GameMode::StartGame()
-{
-}

@@ -11,6 +11,6 @@ InputHandler::~InputHandler()
 {
 }
 
-InputHandler::HandleInput()
+void InputHandler::HandleInput()
 {
 }

@@ -11,10 +11,6 @@ Player::~Player()
 {
 }
 
-void Player::SwitchState()
-{
-}
-
 void Player::SwitchState(PlayerState state)
 {
 }
@@ -24,9 +20,5 @@ void Player::ReceiveDamage(int damage)
 }
 
 void Player::Kill()
-{
-}
-
-void Player::ReceiveDamage()
 {
 }
