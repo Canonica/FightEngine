@@ -156,6 +156,7 @@
     <ClInclude Include="Combo.h" />
     <ClInclude Include="Cooldown.h" />
     <ClInclude Include="Crouch.h" />
+    <ClInclude Include="Crouching.h" />
     <ClInclude Include="CurrentAction.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameMode.h" />
@@ -191,6 +192,7 @@
     <ClCompile Include="Combo.cpp" />
     <ClCompile Include="Cooldown.cpp" />
     <ClCompile Include="Crouch.cpp" />
+    <ClCompile Include="Crouching.cpp" />
     <ClCompile Include="CurrentAction.cpp" />
     <ClCompile Include="FightEngine.cpp" />
     <ClCompile Include="Game.cpp" />

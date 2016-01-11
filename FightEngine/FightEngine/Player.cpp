@@ -20,6 +20,8 @@ Player::Player()
 
 	currentState = new Active();
 
+	damageReduction = 1;
+
 }
 
 Player::~Player()
@@ -28,10 +30,14 @@ Player::~Player()
 
 void Player::SwitchState(PlayerState state)
 {
+	currentState = &state; 
+
 }
 
 void Player::ReceiveDamage(int damage)
 {
+	life -= (damage*damageReduction);
+
 }
 
 void Player::Kill()
@@ -53,9 +59,26 @@ void Player::Play()
 
 void Player::Move(int n)
 {
-	position += n;
+	int posP1 = Game::Instance().getPlayer(0)->GetPosition();
+	int posP2 = Game::Instance().getPlayer(1)->GetPosition();
 
+	if (posP1 = position) {
+		posP1 += n;
+	}
+	else {
+		posP2 += n;
+	}
+
+	if (abs(posP1 - posP2) != 0) {
+		position += n;
+	}
 }
+
+/*void Player::Block()
+{
+
+
+}*/
 
 InputHandler* Player::GetInputHandler() {
 	return inputHandler;
@@ -68,3 +91,15 @@ int Player::GetPosition() {
 int Player::GetId() {
 	return id;
 }
+
+void Player::SetDamageReduction(float reduction)
+{
+	damageReduction = reduction;
+
+}
+
+PlayerState * Player::GetCurrentState()
+{
+	return currentState;
+}
+

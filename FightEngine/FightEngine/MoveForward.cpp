@@ -17,6 +17,5 @@ MoveForward::~MoveForward()
 
 void MoveForward::Execute()
 {
-
-
+	player->Move(1);
 }

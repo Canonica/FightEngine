@@ -13,4 +13,6 @@ Jump::~Jump()
 
 void Jump::Execute()
 {
+	player->SwitchState(Jumping());
+
 }

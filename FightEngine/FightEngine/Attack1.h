@@ -2,7 +2,7 @@
 
 #include "Action.h"
 #include "Player.h"
-
+#include <typeinfo>
 
 class Attack1 : public Action
 {

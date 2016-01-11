@@ -20,10 +20,13 @@ public:
 	void Kill();
 	void Play();
 	void Move(int n);
+	//void Block();
 
 	InputHandler* GetInputHandler();
 	int GetPosition();
 	int GetId();
+	void SetDamageReduction(float reduction);
+	PlayerState* GetCurrentState();
 
 private :
 	int id;
@@ -33,6 +36,7 @@ private :
 	PlayerState* currentState;
 	InputHandler* inputHandler;
 	int position;
+	float damageReduction;
 	
 };
 

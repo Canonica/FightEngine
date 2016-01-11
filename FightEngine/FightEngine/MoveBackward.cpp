@@ -13,4 +13,6 @@ MoveBackward::~MoveBackward()
 
 void MoveBackward::Execute()
 {
+
+	player->Move(-1);
 }
