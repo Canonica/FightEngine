@@ -6,7 +6,7 @@ class Jump :
 public:
 	Jump();
 	~Jump();
-	void Execute();
+	void Execute() override;
 
 private:
 	float jump;

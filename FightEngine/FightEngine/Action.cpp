@@ -11,10 +11,7 @@ Action::~Action()
 {
 }
 
-void Action::Execute()
-{
-}
-
 void Action::SwitchState(ActionState state)
 {
+	currentState = state;
 }

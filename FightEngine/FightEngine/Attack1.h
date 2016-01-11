@@ -1,14 +1,20 @@
 #pragma once
+
 #include "Action.h"
-class Attack1 :
-	public Action
+#include "Player.h"
+
+
+class Attack1 : public Action
 {
 public:
 	Attack1();
 	~Attack1();
-	void Execute();
+	void Execute() override;
+
+	
 
 private :
 	float damage;
+	Player player;
 };
 

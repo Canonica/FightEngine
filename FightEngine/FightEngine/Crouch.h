@@ -1,12 +1,14 @@
 #pragma once
 #include "Action.h"
-class Crouch :
-	public Action
+
+
+class Crouch :public Action
 {
 public:
 	Crouch();
 	~Crouch();
-	void Execute();
+
+	void Execute() override;
 
 
 };

@@ -6,13 +6,14 @@ public:
 	Action();
 	~Action();
 
-	void Execute();
+	virtual void Execute();
 	void SwitchState(ActionState state);
 
-private :
+protected :
 	float launchDelay;
 	float activationDelay;
 	float cooldownDelay;
+	
 	ActionState currentState;
 };
 

@@ -13,4 +13,8 @@ Attack1::~Attack1()
 
 void Attack1::Execute()
 {
+	if ( player )
+	{
+		
+	}
 }

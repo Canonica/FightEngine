@@ -6,7 +6,7 @@ class Block :
 public:
 	Block();
 	~Block();
-	void Execute();
+	void Execute() override;
 
 private :
 	float damageReduction; 

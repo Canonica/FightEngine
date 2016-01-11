@@ -6,7 +6,7 @@ class MoveBackward :
 public:
 	MoveBackward();
 	~MoveBackward();
-	void Execute();
+	void Execute() override;
 
 private :
 	float distance;
