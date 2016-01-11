@@ -1,10 +1,12 @@
 #include "stdafx.h"
 #include "Subject.h"
+#include <iostream>
 
 std::vector<Observer> Subject::observers;
 
 Subject::Subject()
 {
+	
 }
 
 

@@ -20,7 +20,7 @@ void Attack2::Execute()
 
 	Player* PlayerEnemy;
 
-	if (posP1 == player.GetPosition()) {
+	if (posP1 == player->GetPosition()) {
 		PlayerEnemy = Game::Instance().getPlayer(1);
 	}
 	else {

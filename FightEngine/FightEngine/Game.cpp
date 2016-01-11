@@ -18,6 +18,10 @@ Game::Game()
 	arrayOfGameModes[2] = new Adventure();
 	beginArena = 0;
 	endArena = 5;
+	listOfPlayers[0] = new Player(0);
+	std::cout << listOfPlayers[0]->GetId() << std::endl;
+	listOfPlayers[1] = new Player(1);
+	std::cout << listOfPlayers[1]->GetId() << std::endl;
 }
 
 
@@ -27,14 +31,14 @@ Game::~Game()
 }
 
 
-Game* Game::Instance() {
+Game Game::Instance() {
 	if (m_instance == nullptr) {
 		m_instance = new Game();
 	}
-	return m_instance;
+	return *m_instance;
 }
 
-void Game::StartGame(GameMode::GAMEMODE gameMode) {
+void Game::StartGame(GameMode::MODE gameMode) {
 
 	if (GameMode::QUICK == gameMode) {
 		std::cout << "quick" << std::endl;
@@ -47,4 +51,9 @@ void Game::StartGame(GameMode::GAMEMODE gameMode) {
 	else if(gameMode == GameMode::ADVENTURE) {
 		arrayOfGameModes[2]->StartGameMode();
 	}
+}
+
+Player * Game::getPlayer(int id)
+{
+	return listOfPlayers[id];
 }

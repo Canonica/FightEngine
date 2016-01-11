@@ -1,6 +1,7 @@
 #pragma once
-#include "Round.h"
 #include <list>
+
+class Round;
 class GameMode
 {
 public:
@@ -8,7 +9,7 @@ public:
 	~GameMode();
 	void StartGameMode();
 
-	enum GAMEMODE
+	enum MODE
 	{
 		QUICK,
 		TOURNAMENT,

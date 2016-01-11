@@ -8,11 +8,18 @@ static int nbPlayer = 0;
 
 Player::Player()
 {
+}
+
+Player::Player(int n)
+{
+	std::cout << "blabla" << std::endl;
+	std::cin.end;
+
 	life = 100;
 	score = 0;
 
 	nbPlayer++;
-	id = nbPlayer;
+	id = n;
 
 	position = id;
 

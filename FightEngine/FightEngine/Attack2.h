@@ -13,6 +13,5 @@ public:
 
 private :
 	float damage;
-	Player player;
 };
 

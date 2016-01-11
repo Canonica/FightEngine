@@ -14,6 +14,7 @@ class Player :
 {
 public:
 	Player();
+	Player(int n);
 	~Player();
 	void SwitchState(PlayerState state);
 	void ReceiveDamage(int damage);

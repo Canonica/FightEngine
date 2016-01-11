@@ -1,5 +1,6 @@
 #pragma once
 #include "Observer.h"
+#include "Game.h"
 
 
 class Player;
