@@ -1,10 +1,10 @@
 #pragma once
 #include "LooseCondition.h"
+#include "Game.h"
 #include "PlayerState.h"
+class InputHandler;
 class Player :
 	public LooseCondition
-
-	
 
 {
 public:
@@ -18,6 +18,9 @@ public:
 private :
 	float life;
 	float score;
+	Game* game;
+	PlayerState* currentState;
+	InputHandler* inputHandler;
 	
 };
 

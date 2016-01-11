@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Round.h"
-
+#include "Player.h"
+#include "Timer.h"
 
 Round::Round()
 {
@@ -20,5 +21,14 @@ void Round::StartRound()
 }
 
 void Round::FinishRound()
+{
+}
+
+void Round::EndTurn()
+{
+
+}
+
+void Round::Turn()
 {
 }

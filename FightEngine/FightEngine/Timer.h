@@ -1,5 +1,6 @@
 #pragma once
 #include "LooseCondition.h"
+#include "GameMode.h"
 class Timer :
 	public LooseCondition
 {
@@ -12,5 +13,6 @@ public:
 
 private :
 	float time;
+	GameMode gameMode;
 };
 

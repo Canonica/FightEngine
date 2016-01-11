@@ -13,5 +13,6 @@ private :
 	float launchDelay;
 	float activationDelay;
 	float cooldownDelay;
+	ActionState currentState;
 };
 

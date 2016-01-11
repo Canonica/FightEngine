@@ -4,6 +4,7 @@
 
 GameMode::GameMode()
 {
+	//listOfRounds = std::list<Round>();
 }
 
 

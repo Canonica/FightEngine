@@ -157,6 +157,7 @@
     <ClInclude Include="Cooldown.h" />
     <ClInclude Include="Crouch.h" />
     <ClInclude Include="CurrentAction.h" />
+    <ClInclude Include="Game.h" />
     <ClInclude Include="GameMode.h" />
     <ClInclude Include="InAction.h" />
     <ClInclude Include="InputHandler.h" />
@@ -192,6 +193,7 @@
     <ClCompile Include="Crouch.cpp" />
     <ClCompile Include="CurrentAction.cpp" />
     <ClCompile Include="FightEngine.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameMode.cpp" />
     <ClCompile Include="InAction.cpp" />
     <ClCompile Include="InputHandler.cpp" />

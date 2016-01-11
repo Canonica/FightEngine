@@ -10,3 +10,7 @@ Combo::Combo()
 Combo::~Combo()
 {
 }
+
+void Combo::Execute()
+{
+}
