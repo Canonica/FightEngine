@@ -51,6 +51,12 @@ void Player::Play()
 	}
 }
 
+void Player::Move(int n)
+{
+	position += n;
+
+}
+
 InputHandler* Player::GetInputHandler() {
 	return inputHandler;
 }

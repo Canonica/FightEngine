@@ -19,6 +19,7 @@ public:
 	void ReceiveDamage(int damage);
 	void Kill();
 	void Play();
+	void Move(int n);
 
 	InputHandler* GetInputHandler();
 	int GetPosition();
