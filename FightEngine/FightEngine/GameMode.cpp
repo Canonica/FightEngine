@@ -14,4 +14,5 @@ GameMode::~GameMode()
 
 void GameMode::StartGameMode()
 {
+	Round::StartRound();
 }

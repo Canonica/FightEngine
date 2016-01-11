@@ -18,6 +18,10 @@ void Round::Notify()
 
 void Round::StartRound()
 {
+	bool running = true;
+	while (running) {
+
+	}
 }
 
 void Round::FinishRound()

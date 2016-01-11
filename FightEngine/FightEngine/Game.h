@@ -9,7 +9,10 @@ class Game
 public:
 	Game();
 	~Game();
+	static Game* Instance();
+	
 private:
+	static Game* m_instance;
 	//std::list<GameMode*> listOfGameModes;
 	//std::array<Player, 2> listOfPlayers;
 };
