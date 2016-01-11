@@ -1,5 +1,7 @@
 #pragma once
 #include "ActionState.h"
+#include "Player.h"
+
 class Action
 {
 public:
@@ -8,6 +10,7 @@ public:
 
 	virtual void Execute();
 	void SwitchState(ActionState state);
+	void SetPlayer(Player* p);
 
 protected :
 	float launchDelay;
@@ -15,5 +18,6 @@ protected :
 	float cooldownDelay;
 	
 	ActionState currentState;
+	Player *player;
 };
 
