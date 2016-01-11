@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Subject.h"
 
+std::vector<Observer> Subject::observers;
 
 Subject::Subject()
 {
@@ -21,4 +22,8 @@ void Subject::UnregisterObserver(Observer parObserver)
 
 void Subject::NotifyObservers()
 {
+	for (std::vector<Observer>::iterator i = observers.begin(); i != observers.end(); ++i) { 
+		i->Notify();
+	}
+
 }

@@ -7,12 +7,12 @@ class Timer :
 public:
 	Timer();
 	~Timer();
-	void Launch();
+	static void Launch();
 	void Stop();
-	void Pause();
 
 private :
 	float time;
+	static bool isTiming;
 	GameMode gameMode;
 };
 

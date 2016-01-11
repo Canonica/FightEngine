@@ -1,14 +1,23 @@
 #include "stdafx.h"
+#include <typeinfo>
 #include "Game.h"
 #include "Player.h"
+#include "QuickMatch.h"
+#include "Tournament.h"
+#include "Adventure.h"
+#include <iostream>
+#include <Windows.h>
 
 Game* Game::m_instance = nullptr;
+std::array<GameMode*, 3> Game::arrayOfGameModes;
 
 Game::Game()
 {
-	//listOfGameModes = std::list<GameMode*>();
-	(*listOfPlayers)[0] = Player();
-	(*listOfPlayers)[1] = Player();
+	arrayOfGameModes[0] = new QuickMatch();
+	arrayOfGameModes[1] = new Tournament();
+	arrayOfGameModes[2] = new Adventure();
+	beginArena = 0;
+	endArena = 5;
 }
 
 
@@ -18,14 +27,24 @@ Game::~Game()
 }
 
 
-Game Game::Instance() {
+Game* Game::Instance() {
 	if (m_instance == nullptr) {
 		m_instance = new Game();
 	}
-	return *m_instance;
+	return m_instance;
 }
 
-Player * Game::getPlayer(int id)
-{
-	return &(*listOfPlayers)[id];
+void Game::StartGame(GameMode::GAMEMODE gameMode) {
+
+	if (GameMode::QUICK == gameMode) {
+		std::cout << "quick" << std::endl;
+		std::cin.get();
+		arrayOfGameModes[0]->StartGameMode();
+	}
+	else if(gameMode == GameMode::TOURNAMENT){
+		arrayOfGameModes[1]->StartGameMode();
+	}
+	else if(gameMode == GameMode::ADVENTURE) {
+		arrayOfGameModes[2]->StartGameMode();
+	}
 }

@@ -6,13 +6,13 @@ class Subject
 public:
 	Subject();
 	~Subject();
-	void RegisterObserver(Observer parObserver);
-	void UnregisterObserver(Observer parObserver);
-	void NotifyObservers();
+	static void RegisterObserver(Observer parObserver);
+	static void UnregisterObserver(Observer parObserver);
+	static void NotifyObservers();
 
 
 private :
 	
-		std::vector<Observer> observers;
+		static std::vector<Observer> observers;
 };
 
