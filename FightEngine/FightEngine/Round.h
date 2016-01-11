@@ -11,7 +11,7 @@ public:
 	~Round();
 
 	void Notify();
-	void StartRound();
+	static void StartRound();
 	void FinishRound();
 	void EndTurn();
 	void Turn();

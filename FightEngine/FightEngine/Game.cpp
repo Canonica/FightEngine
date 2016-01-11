@@ -10,4 +10,13 @@ Game::Game()
 
 Game::~Game()
 {
+	m_instance = this;
+}
+
+
+Game* Game::Instance() {
+	if (m_instance == nullptr) {
+		m_instance = new Game();
+	}
+	return m_instance;
 }

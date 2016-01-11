@@ -6,7 +6,7 @@ class GameMode
 public:
 	GameMode();
 	~GameMode();
-	void StartGameMode();
+	static void StartGameMode();
 private:
 	int nbOfRounds;
 	//std::list<Round> listOfRounds;
