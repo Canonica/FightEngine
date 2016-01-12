@@ -17,11 +17,11 @@ public:
 		ADVENTURE
 	};
 
-	void DecideWinner(Player* winnerR1, Player* winnerR2, Player* winnerR3);
+	void DecideWinner(int n1, int n2);
 
 private:
 
-	std::list<Round> listOfRounds;
+	std::list<Round*> listOfRounds;
 	Player* winner;
 	Player* looser;
 };

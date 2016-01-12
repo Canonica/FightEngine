@@ -16,6 +16,7 @@ public:
 	void FinishRound();
 	void EndTurn();
 	void Turn();
+	Player* GetWinner();
 
 private :
 	Player* winner;

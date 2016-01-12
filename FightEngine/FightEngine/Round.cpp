@@ -78,3 +78,8 @@ void Round::EndTurn()
 void Round::Turn()
 {
 }
+
+Player * Round::GetWinner()
+{
+	return winner;
+}

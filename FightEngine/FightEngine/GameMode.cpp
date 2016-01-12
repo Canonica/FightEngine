@@ -7,7 +7,7 @@
 
 GameMode::GameMode()
 {
-	listOfRounds = std::list<Round>();
+	listOfRounds = std::list<Round*>();
 }
 
 
@@ -17,41 +17,26 @@ GameMode::~GameMode()
 
 void GameMode::StartGameMode()
 {
-	for (int i = 0; i < 3; i++) {
-		Round().StartRound();
-	}
-	//DecideWinner(Round().StartRound(), Round().StartRound(), Round().StartRound());
-}
-
-void GameMode::DecideWinner(Player* winnerR1, Player* winnerR2, Player* winnerR3)
-{
 	int countP1 = 0;
 	int countP2 = 0;
+	for (int i = 0; i < 3; i++) {
+		Round* r = new Round();
+		r->StartRound();
+		if (r->GetWinner()->GetId() == 0) {
+			countP1++;
+		}
+		else {
+			countP2++;
+		}
+	}
+	DecideWinner(countP1,countP2);
+}
 
-	if (winnerR1 == Game::Instance()->getPlayer(0)) {
-		countP1++;
-	}
-	else {
-		countP2++;
-	}
+void GameMode::DecideWinner(int n1, int n2)
+{
+	int winnerId = n1 < n2 ? 1 : 0;
 
-	if (winnerR2 == Game::Instance()->getPlayer(0)) {
-		countP1++;
-	}
-	else {
-		countP2++;
-	}
-
-	if (winnerR3 == Game::Instance()->getPlayer(0)) {
-		countP1++;
-	}
-	else {
-		countP2++;
-	}
-
-	winner = countP1 < countP2 ? Game::Instance()->getPlayer(1) : Game::Instance()->getPlayer(0);
-
-	std::cout << "The winner is Player " << winner->GetId() << " !" << std::endl;
+	std::cout << "The winner is Player " << winnerId << " !" << std::endl;
 	Sleep(3000);
 
 }
