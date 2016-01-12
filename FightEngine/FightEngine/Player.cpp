@@ -72,7 +72,7 @@ void Player::Move(int n)
 	int posP1 = Game::Instance()->getPlayer(0)->GetPosition();
 	int posP2 = Game::Instance()->getPlayer(1)->GetPosition();
 
-	if (posP1 = position) {
+	if (posP1 == position) {
 		posP1 += n;
 	}
 	else {
