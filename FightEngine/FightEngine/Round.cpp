@@ -24,10 +24,6 @@ void Round::Notify()
 
 void Round::StartRound()
 {
-	int milliseconds = 0;
-	int seconds = 0;
-	int minutes = 0;
-
 	int maxMinutes = 0;
 	int maxSeconds = 10;
 
@@ -36,16 +32,13 @@ void Round::StartRound()
 
 	start = std::clock();
 	
-	
-
-
 	Subject::RegisterObserver(*this);
 	//Timer::Launch();
 	while (running) {
 		duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 		duration = maxSeconds - duration;
 		system("cls");
-		std::cout << duration ;
+		std::cout << duration << std::endl;
 		
 		/*Timer
 		if (milliseconds == 10) {
@@ -72,13 +65,14 @@ void Round::StartRound()
 			return;
 		}*/
 		//Jeu
-		Player *player1 = Game::Instance().getPlayer(0);
-		player1->Play();
-		Player *player2 = Game::Instance().getPlayer(1);
-		player2->Play();
 		if (duration < 0) {
 			running = false;
+			break;
 		}
+		Player *player1 = Game::Instance()->getPlayer(0);
+		player1->Play();
+		Player *player2 = Game::Instance()->getPlayer(1);
+		player2->Play();
 		
 
 	}

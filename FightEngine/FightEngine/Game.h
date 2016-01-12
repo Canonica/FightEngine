@@ -9,7 +9,7 @@ class Game
 public:
 	Game();
 	~Game();
-	static Game Instance();
+	static Game* Instance();
 	static void StartGame(GameMode::MODE);
 	Player* getPlayer(int id);
 	

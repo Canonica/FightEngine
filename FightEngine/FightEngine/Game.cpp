@@ -19,23 +19,28 @@ Game::Game()
 	beginArena = 0;
 	endArena = 5;
 	listOfPlayers[0] = new Player(0);
-	std::cout << listOfPlayers[0]->GetId() << std::endl;
 	listOfPlayers[1] = new Player(1);
-	std::cout << listOfPlayers[1]->GetId() << std::endl;
 }
 
 
 Game::~Game()
 {
 	m_instance = this;
+	for (int i = 0; i<arrayOfGameModes.size(); i++)
+		delete arrayOfGameModes[i];
+
+	for (int i = 0; i<listOfPlayers.size(); i++)
+		delete listOfPlayers[i];
+	
+	
 }
 
 
-Game Game::Instance() {
+Game* Game::Instance() {
 	if (m_instance == nullptr) {
 		m_instance = new Game();
 	}
-	return *m_instance;
+	return m_instance;
 }
 
 void Game::StartGame(GameMode::MODE gameMode) {
