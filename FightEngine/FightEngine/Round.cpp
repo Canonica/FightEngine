@@ -47,12 +47,24 @@ void Round::StartRound()
 		//Jeu
 		if (duration < 0) {
 			running = false;
+
+			if (Game::Instance()->getPlayer(0)->GetLife() > Game::Instance()->getPlayer(1)->GetLife()) {
+				winner = Game::Instance()->getPlayer(0);
+				looser = Game::Instance()->getPlayer(1);
+			}
+			else {
+				winner = Game::Instance()->getPlayer(1);
+				looser = Game::Instance()->getPlayer(0);
+			}
+			
 			break;
 		}
 
 		Player *player1 = Game::Instance()->getPlayer(0);
+		player1->SwitchState(PlayerState::ACTIVE);
 		player1->Play();
 		Player *player2 = Game::Instance()->getPlayer(1);
+		player2->SwitchState(PlayerState::ACTIVE);
 		player2->Play();
 		if (Game::Instance()->getPlayer(0)->GetLife() <= 0) {
 			winner = Game::Instance()->getPlayer(1);
