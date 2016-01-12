@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "CurrentAction.h"
-
+#include "MoveBackward.h"
 
 CurrentAction::CurrentAction()
 {
@@ -23,7 +23,7 @@ void CurrentAction::Remove()
 {
 }
 
-Action CurrentAction::GetChildren()
+Action* CurrentAction::GetChildren()
 {
-	return Action();
+	return new MoveBackward();
 }

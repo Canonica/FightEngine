@@ -13,6 +13,6 @@ public:
 private :
 	float time;
 	static bool isTiming;
-	GameMode gameMode;
+	GameMode* gameMode;
 };
 

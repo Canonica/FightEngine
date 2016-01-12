@@ -16,7 +16,7 @@ public:
 	Player();
 	Player(int n);
 	~Player();
-	void SwitchState(PlayerState state);
+	void SwitchState(PlayerState::STATE state);
 	void ReceiveDamage(int damage);
 	void Kill();
 	void Play();
@@ -27,14 +27,14 @@ public:
 	int GetPosition();
 	int GetId();
 	void SetDamageReduction(float reduction);
-	PlayerState* GetCurrentState();
+	PlayerState::STATE GetCurrentState();
 
 private :
 	int id;
 	float life;
 	float score;
 	Game* game;
-	PlayerState* currentState;
+	PlayerState::STATE currentState;
 	InputHandler* inputHandler;
 	int position;
 	float damageReduction;

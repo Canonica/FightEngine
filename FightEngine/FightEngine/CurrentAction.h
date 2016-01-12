@@ -10,8 +10,8 @@ public:
 	void Execute();
 	void Add();
 	void Remove();
-	Action GetChildren();
+	Action* GetChildren();
 private:
-	std::list<Action> previousActions;
+	std::list<Action*> previousActions;
 };
 

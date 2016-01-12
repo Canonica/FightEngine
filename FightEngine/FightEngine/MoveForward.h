@@ -6,7 +6,7 @@ class MoveForward :
 public:
 	MoveForward();
 	~MoveForward();
-	void Execute() override;
+	void Execute();
 
 private :
 	float distance;

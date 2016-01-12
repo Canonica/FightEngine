@@ -8,7 +8,7 @@ public:
 	Action();
 	~Action();
 
-	virtual void Execute();
+	virtual void Execute()=0;
 	void SwitchState(ActionState state);
 	void SetPlayer(Player* p);
 

@@ -32,7 +32,7 @@ void Round::StartRound()
 
 	start = std::clock();
 	
-	Subject::RegisterObserver(*this);
+	Subject::RegisterObserver(this);
 	//Timer::Launch();
 	while (running) {
 		duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;

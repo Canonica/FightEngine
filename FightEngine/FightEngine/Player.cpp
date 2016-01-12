@@ -20,9 +20,9 @@ Player::Player(int n)
 
 	position = id;
 
-	inputHandler = new InputHandler();
+	inputHandler = new InputHandler(this);
 
-	currentState = new Active();
+	currentState = PlayerState::ACTIVE;
 
 	damageReduction = 1;
 
@@ -31,12 +31,12 @@ Player::Player(int n)
 Player::~Player()
 {
 	delete inputHandler;
-	delete currentState; 
+	//delete currentState; 
 }
 
-void Player::SwitchState(PlayerState state)
+void Player::SwitchState(PlayerState::STATE state)
 {
-	currentState = &state; 
+	currentState = state; 
 
 }
 
@@ -52,10 +52,10 @@ void Player::Kill()
 
 void Player::Play()
 {
-	if (typeid(currentState) != typeid(Stunned) && typeid(currentState) != typeid(Attacking)) {
+	if (currentState != PlayerState::STUNNED && currentState != PlayerState::ATTACKING) {
 		inputHandler->HandleInput();
 	}
-	else if (typeid(currentState) == typeid(Stunned)) {
+	else if (currentState == PlayerState::STUNNED) {
 		std::cout << "you are stunned" << std::endl;
 	}
 	else {
@@ -104,7 +104,7 @@ void Player::SetDamageReduction(float reduction)
 
 }
 
-PlayerState * Player::GetCurrentState()
+PlayerState::STATE Player::GetCurrentState()
 {
 	return currentState;
 }

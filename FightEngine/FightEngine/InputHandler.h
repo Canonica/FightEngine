@@ -13,14 +13,14 @@
 class InputHandler
 {
 public:
-	InputHandler();
+	InputHandler(Player* p);
 	~InputHandler();
 	void HandleInput();
 	enum ACTIONS {PUNCH, KICK, FORWARD, BACKWARD, JUMP, BLOCK, CROUCH};
 	
 
 private:
-	std::array<Action, 7> actionArray;
+	std::array<Action*, 7> actionArray;
 	Player *player;
 };
 

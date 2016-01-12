@@ -1,10 +1,53 @@
-﻿Build started 12/01/2016 10:28:10.
-     1>Project "C:\Users\r.maurouard\Documents\Cours\Architecture\FightEngine\FightEngine\FightEngine\FightEngine.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/01/2016 12:32:15.
+     1>Project "C:\Users\pi.martinez\Documents\Travail\Archi\FightEngine\FightEngine\FightEngine\FightEngine.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\pi.martinez\documents\travail\archi\fightengine\fightengine\fightengine\debug\fightengine.pch' because it is being used by another process.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\FightEngine.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Round.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yc"stdafx.h" /Fp"Debug\FightEngine.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Yu"stdafx.h" /Fp"Debug\FightEngine.pch" /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Action.cpp ActionState.cpp Active.cpp Adventure.cpp Attack1.cpp Attack2.cpp Attacking.cpp Block.cpp Combo.cpp Cooldown.cpp Crouch.cpp Crouching.cpp CurrentAction.cpp FightEngine.cpp Game.cpp GameMode.cpp InAction.cpp InputHandler.cpp Jump.cpp Jumping.cpp LooseCondition.cpp MoveBackward.cpp MoveForward.cpp Observer.cpp Player.cpp PlayerState.cpp QuickMatch.cpp Ready.cpp Round.cpp Stunned.cpp Subject.cpp Timer.cpp Tournament.cpp
+         Tournament.cpp
+         Timer.cpp
+         Subject.cpp
+         Stunned.cpp
          Round.cpp
+         Ready.cpp
+         QuickMatch.cpp
+         PlayerState.cpp
+         Player.cpp
+         Observer.cpp
+         MoveForward.cpp
+         MoveBackward.cpp
+         LooseCondition.cpp
+         Jumping.cpp
+         Jump.cpp
+         InputHandler.cpp
+     1>c:\users\pi.martinez\documents\travail\archi\fightengine\fightengine\fightengine\inputhandler.cpp(20): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\pi.martinez\documents\travail\archi\fightengine\fightengine\fightengine\inputhandler.cpp(29): warning C4018: '<': signed/unsigned mismatch
+         InAction.cpp
+         GameMode.cpp
+         Game.cpp
+     1>c:\users\pi.martinez\documents\travail\archi\fightengine\fightengine\fightengine\game.cpp(29): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\pi.martinez\documents\travail\archi\fightengine\fightengine\fightengine\game.cpp(32): warning C4018: '<': signed/unsigned mismatch
+         FightEngine.cpp
+     1>c:\users\pi.martinez\documents\travail\archi\fightengine\fightengine\fightengine\fightengine.cpp(16): warning C4101: 'start': unreferenced local variable
+         Generating Code...
+         Compiling...
+         CurrentAction.cpp
+         Crouching.cpp
+         Crouch.cpp
+         Cooldown.cpp
+         Combo.cpp
+         Block.cpp
+         Attacking.cpp
+         Attack2.cpp
+         Attack1.cpp
+         Adventure.cpp
+         Active.cpp
+         ActionState.cpp
+         Action.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\r.maurouard\Documents\Cours\Architecture\FightEngine\FightEngine\Debug\FightEngine.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\r.maurouard\Documents\Cours\Architecture\FightEngine\FightEngine\Debug\FightEngine.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\r.maurouard\Documents\Cours\Architecture\FightEngine\FightEngine\Debug\FightEngine.lib" /MACHINE:X86 Debug\Action.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\pi.martinez\Documents\Travail\Archi\FightEngine\FightEngine\Debug\FightEngine.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\pi.martinez\Documents\Travail\Archi\FightEngine\FightEngine\Debug\FightEngine.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\pi.martinez\Documents\Travail\Archi\FightEngine\FightEngine\Debug\FightEngine.lib" /MACHINE:X86 Debug\Action.obj
          Debug\ActionState.obj
          Debug\Active.obj
          Debug\Adventure.obj
@@ -38,9 +81,9 @@
          Debug\Subject.obj
          Debug\Timer.obj
          Debug\Tournament.obj
-         FightEngine.vcxproj -> C:\Users\r.maurouard\Documents\Cours\Architecture\FightEngine\FightEngine\Debug\FightEngine.exe
-     1>Done Building Project "C:\Users\r.maurouard\Documents\Cours\Architecture\FightEngine\FightEngine\FightEngine\FightEngine.vcxproj" (Build target(s)).
+         FightEngine.vcxproj -> C:\Users\pi.martinez\Documents\Travail\Archi\FightEngine\FightEngine\Debug\FightEngine.exe
+     1>Done Building Project "C:\Users\pi.martinez\Documents\Travail\Archi\FightEngine\FightEngine\FightEngine\FightEngine.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.75
+Time Elapsed 00:00:07.02

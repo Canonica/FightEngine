@@ -1,5 +1,7 @@
 #pragma once
 #include "Action.h"
+#include "PlayerState.h"
+
 class Jump :
 	public Action
 {

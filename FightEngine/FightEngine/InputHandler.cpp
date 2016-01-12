@@ -1,26 +1,33 @@
 #include "stdafx.h"
 #include "InputHandler.h"
 #include <iostream>
+#include <Windows.h>
 
-
-InputHandler::InputHandler()
+InputHandler::InputHandler(Player* p) : player(p)
 {
-	actionArray[PUNCH] = Attack1();
-	actionArray[KICK] = Attack2();
-	actionArray[FORWARD] = MoveForward();
-	actionArray[BACKWARD] = MoveBackward();
-	actionArray[JUMP] = Jump();
-	actionArray[BLOCK] = Block();
-	actionArray[CROUCH] = Crouch();
+	actionArray = std::array<Action*, 7>();
 
-	for (int i = 0; i < sizeof(actionArray) / sizeof(Action); i++) {
-		actionArray[i].SetPlayer(player);
+	actionArray[PUNCH] = new Attack1();
+	actionArray[KICK] = new Attack2();
+	actionArray[FORWARD] = new MoveForward();
+	actionArray[BACKWARD] = new MoveBackward();
+	actionArray[JUMP] = new Jump();
+	actionArray[BLOCK] = new Block();
+	actionArray[CROUCH] = new Crouch();
+
+	std::cout << actionArray.size() << std::endl;
+
+	for (int i = 0; i < actionArray.size(); i++) {
+		actionArray[i]->SetPlayer(player);
 	}
 }
 
 
+
 InputHandler::~InputHandler()
 {
+	for (int i = 0; i<actionArray.size(); i++)
+		delete actionArray[i];
 }
 
 void InputHandler::HandleInput()
@@ -52,9 +59,10 @@ void InputHandler::HandleInput()
 			goodAction = false;
 		}
 
+
 		if (goodAction) {
-			actionArray[action].Execute();
 			std::cout << "input entered : " << input << " -> " << action << std::endl;
+			actionArray[action]->Execute();
 		}
 	}
 }

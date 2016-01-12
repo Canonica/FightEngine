@@ -2,6 +2,7 @@
 
 #include "Action.h"
 #include "Player.h"
+#include "PlayerState.h"
 #include <typeinfo>
 
 class Attack1 : public Action
@@ -14,6 +15,6 @@ public:
 	
 
 private :
-	float damage;
+	int damage;
 };
 

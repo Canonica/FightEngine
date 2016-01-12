@@ -1,6 +1,9 @@
 #pragma once
 
 #include "Action.h"
+#include "PlayerState.h"
+#include "Player.h"
+#include <typeinfo>
 
 
 class Attack2 : public Action
@@ -12,6 +15,6 @@ public:
 
 
 private :
-	float damage;
+	int damage;
 };
 
