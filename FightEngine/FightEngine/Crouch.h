@@ -7,7 +7,7 @@
 class Crouch :public Action
 {
 public:
-	Crouch();
+	Crouch(char parInput);
 	~Crouch();
 
 	void Execute() override;

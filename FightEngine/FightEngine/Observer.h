@@ -4,6 +4,6 @@ class Observer
 public:
 	Observer();
 	~Observer();
-	void Notify();
+	virtual void Notify() = 0;
 };
 

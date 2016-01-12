@@ -3,7 +3,7 @@
 #include <iostream>
 #include <Windows.h>
 
-MoveForward::MoveForward()
+MoveForward::MoveForward(char parInput) :Action(parInput)
 {
 
 

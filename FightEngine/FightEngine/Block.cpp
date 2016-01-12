@@ -2,7 +2,7 @@
 #include "Block.h"
 #include <iostream>
 
-Block::Block()
+Block::Block(char parInput) :Action(parInput)
 {
 	damageReduction = 0.5;
 

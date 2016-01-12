@@ -4,7 +4,7 @@ class MoveBackward :
 	public Action
 {
 public:
-	MoveBackward();
+	MoveBackward(char parInput);
 	~MoveBackward();
 	void Execute() override;
 

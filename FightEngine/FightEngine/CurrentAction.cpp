@@ -23,7 +23,7 @@ void CurrentAction::Remove()
 {
 }
 
-Action* CurrentAction::GetChildren()
+/*Action* CurrentAction::GetChildren()
 {
 	return new MoveBackward();
-}
+}*/

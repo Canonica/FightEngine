@@ -3,7 +3,7 @@
 #include <cmath> 
 #include <iostream>
 
-Attack1::Attack1()
+Attack1::Attack1(char parInput) : Action(parInput)
 {
 	damage = 10;
 }

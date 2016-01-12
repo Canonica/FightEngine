@@ -4,7 +4,7 @@ class Block :
 	public Action
 {
 public:
-	Block();
+	Block(char parInput);
 	~Block();
 	void Execute() override;
 

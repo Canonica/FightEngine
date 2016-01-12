@@ -13,6 +13,6 @@ public:
 
 private :
 	
-		static std::vector<Observer*> observers;
+		static Observer* observer;
 };
 

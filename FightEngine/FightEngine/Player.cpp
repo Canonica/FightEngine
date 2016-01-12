@@ -42,12 +42,16 @@ void Player::SwitchState(PlayerState::STATE state)
 
 void Player::ReceiveDamage(int damage)
 {
+	std::cout << "The Player "<< id << " receive " <<damage*damageReduction << " damages !" << std::endl;
 	life -= (damage*damageReduction);
-
+	if (life <= 0) {
+		Kill();
+	}
 }
 
 void Player::Kill()
 {
+	NotifyObservers();
 }
 
 void Player::Play()
@@ -107,5 +111,15 @@ void Player::SetDamageReduction(float reduction)
 PlayerState::STATE Player::GetCurrentState()
 {
 	return currentState;
+}
+
+int Player::GetLife()
+{
+	return life;
+}
+
+void Player::ResetLife()
+{
+	life = 100;
 }
 

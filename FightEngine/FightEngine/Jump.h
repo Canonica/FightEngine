@@ -6,7 +6,7 @@ class Jump :
 	public Action
 {
 public:
-	Jump();
+	Jump(char parInput);
 	~Jump();
 	void Execute() override;
 

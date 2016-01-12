@@ -16,11 +16,12 @@ public:
 	InputHandler(Player* p);
 	~InputHandler();
 	void HandleInput();
-	enum ACTIONS {PUNCH, KICK, FORWARD, BACKWARD, JUMP, BLOCK, CROUCH};
-	
+	enum ACTIONS {
+		PUNCH, KICK, FORWARD, BACKWARD, JUMP, BLOCK, CROUCH, HIGHPUNCH, LOWPUNCH, HIGHKICK, LOWKICK, BACKFLIPKICK, UPPERCUT, NUTDESTROYER
+	};
 
 private:
-	std::array<Action*, 7> actionArray;
+	std::array<Action*, 14> actionArray;
 	Player *player;
 };
 

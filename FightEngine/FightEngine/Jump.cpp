@@ -2,7 +2,7 @@
 #include "Jump.h"
 #include <iostream>
 
-Jump::Jump()
+Jump::Jump(char parInput) :Action(parInput)
 {
 }
 

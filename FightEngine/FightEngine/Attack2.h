@@ -9,7 +9,7 @@
 class Attack2 : public Action
 {
 public:
-	Attack2();
+	Attack2(char parInput);
 	~Attack2();
 	void Execute() override;
 

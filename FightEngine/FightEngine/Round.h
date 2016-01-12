@@ -2,7 +2,6 @@
 #include "Observer.h"
 #include "Game.h"
 
-
 class Player;
 class Timer;
 class Round :
@@ -12,7 +11,7 @@ public:
 	Round();
 	~Round();
 
-	void Notify();
+	void Notify() override;
 	void StartRound();
 	void FinishRound();
 	void EndTurn();

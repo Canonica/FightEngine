@@ -3,7 +3,7 @@
 #include <cmath> 
 #include <iostream>
 
-Attack2::Attack2()
+Attack2::Attack2(char parInput) :Action(parInput)
 {
 	damage = 10;
 }

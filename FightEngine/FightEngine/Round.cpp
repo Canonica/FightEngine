@@ -24,8 +24,12 @@ void Round::Notify()
 
 void Round::StartRound()
 {
+	Game::Instance()->getPlayer(0)->ResetLife();
+	Game::Instance()->getPlayer(1)->ResetLife();
+	running = true;
+
 	int maxMinutes = 0;
-	int maxSeconds = 10;
+	int maxSeconds = 30;
 
 	std::clock_t start;
 	double duration;
@@ -37,44 +41,27 @@ void Round::StartRound()
 	while (running) {
 		duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 		duration = maxSeconds - duration;
-		system("cls");
-		std::cout << duration << std::endl;
+		std::cout << std::endl;
+		std::cout << "Time remaining : " << duration << std::endl;
 		
-		/*Timer
-		if (milliseconds == 10) {
-			maxSeconds--;
-			milliseconds = 0;
-		}
-		if (seconds == 60) {
-			maxMinutes--;
-			seconds = 0;
-		}
-		system("cls");
-		if (maxSeconds < 10) {
-			std::cout << maxMinutes << ":0" << maxSeconds;
-		}
-		else {
-			std::cout << maxMinutes << ":" << maxSeconds;
-		}
-		++milliseconds;
-		Sleep(100);
-		if (maxMinutes == 0 && maxSeconds == 0) {
-			system("cls");
-			std::cout << "Game finished" << std::endl;
-			Subject::NotifyObservers();
-			return;
-		}*/
 		//Jeu
 		if (duration < 0) {
 			running = false;
 			break;
 		}
+
 		Player *player1 = Game::Instance()->getPlayer(0);
 		player1->Play();
 		Player *player2 = Game::Instance()->getPlayer(1);
 		player2->Play();
-		
-
+		if (Game::Instance()->getPlayer(0)->GetLife() <= 0) {
+			winner = Game::Instance()->getPlayer(1);
+			looser = Game::Instance()->getPlayer(0);
+		}
+		else if (Game::Instance()->getPlayer(1)->GetLife() <= 0) {
+			winner = Game::Instance()->getPlayer(0);
+			looser = Game::Instance()->getPlayer(1);
+		}
 	}
 	
 }

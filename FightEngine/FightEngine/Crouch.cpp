@@ -2,7 +2,7 @@
 #include "Crouch.h"
 #include <iostream>
 
-Crouch::Crouch()
+Crouch::Crouch(char parInput) :Action(parInput)
 {
 }
 

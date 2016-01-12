@@ -2,7 +2,7 @@
 #include "MoveBackward.h"
 #include <iostream>
 
-MoveBackward::MoveBackward()
+MoveBackward::MoveBackward(char parInput) :Action(parInput)
 {
 }
 

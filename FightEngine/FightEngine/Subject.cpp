@@ -2,7 +2,7 @@
 #include "Subject.h"
 #include <iostream>
 
-std::vector<Observer*> Subject::observers;
+Observer* Subject::observer;
 
 Subject::Subject()
 {
@@ -16,16 +16,16 @@ Subject::~Subject()
 
 void Subject::RegisterObserver(Observer* parObserver)
 {
+	std::cout << "register"<< std::endl;
+	observer = parObserver;
 }
 
 void Subject::UnregisterObserver(Observer* parObserver)
 {
+	observer = nullptr;
 }
 
 void Subject::NotifyObservers()
 {
-	for (std::vector<Observer*>::iterator i = observers.begin(); i != observers.end(); ++i) { 
-		(*i)->Notify();
-	}
-
+	observer->Notify();
 }

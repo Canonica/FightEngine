@@ -9,7 +9,7 @@
 #include <Windows.h>
 
 Game* Game::m_instance = nullptr;
-std::array<GameMode*, 3> Game::arrayOfGameModes;
+std::array<GameMode*, 3> Game::arrayOfGameModes = std::array<GameMode*, 3>();
 
 Game::Game()
 {

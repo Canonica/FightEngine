@@ -4,7 +4,7 @@ class MoveForward :
 	public Action
 {
 public:
-	MoveForward();
+	MoveForward(char parInput);
 	~MoveForward();
 	void Execute();
 

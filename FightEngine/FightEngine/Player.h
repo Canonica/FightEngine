@@ -28,6 +28,8 @@ public:
 	int GetId();
 	void SetDamageReduction(float reduction);
 	PlayerState::STATE GetCurrentState();
+	int GetLife();
+	void ResetLife();
 
 private :
 	int id;
